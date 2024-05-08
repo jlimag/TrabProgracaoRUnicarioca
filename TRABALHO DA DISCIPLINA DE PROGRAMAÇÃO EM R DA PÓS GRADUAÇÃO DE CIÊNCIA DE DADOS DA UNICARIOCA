@@ -1,0 +1,11 @@
+TRABALHO DA DISCIPLINA DE PROGRAMAÇÃO EM R DA PÓS GRADUAÇÃO DE CIÊNCIA DE DADOS DA UNICARIOCA
+
+library(quantmod)
+library(TTR)
+
+acao <- "MGLU3.SA"
+getSymbols(acao, src = "yahoo")
+
+chartSeries(MGLU3.SA, theme = "white", subset = "last 1 year", TAsep=';')
+addBBands()
+addSMA(n = c(50, 200), on = 1)
